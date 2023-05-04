@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IceCream</title>
+    <script src="./index.js"></script>
+</head>
+<body>
+    <fieldset>
+        <legend>IceCream</legend>
+        <form>
+          <label for="numberOfScoops">Number of scoops</label>
+          <input type="number" id="numberOfScoops" min="1" max="4" required>
+        </form>
+        <form>
+          <input type="radio" id="choiceCone" name="choice">
+          <label for="choiceCone">Cone</label>
+          <input type="radio" id="choiceCup" name="choice">
+          <label for="choiceCup">Cup</label>
+        </form>
+
+        <div style="display: none;"   id="toppings">
+          <legend>Toppings</legend>
+          <table>
+            <tr>
+              <td>
+                <input type="checkbox" id="dessertOne" name="dessertOne">
+                <label>Sprinkles($.50)</label>
+              </td>  
+              <td>
+                <input type="checkbox" id="dessertTwo" name="dessertTwo">
+                <label>Whipped Cream ($0.25)</label>
+              </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" id="dessertThree" name="dessertThree">
+                    <label>Hot Fudge ($1.25)</label>
+                </td>
+                <td>
+                    <input type="checkbox" id="dessertFour" name="dessertFour">
+                    <label>Cherry ($0.25)</label>
+                </td>
+            </tr>
+          </table>   
+        </div>
+        
+        <input type="button" id="submitOrder" name="submitOrder" value="Submit Order">
+        <table>
+            <tr>
+              <td>Base price:</td>
+              <td>$<span id="basePrice">00.00</span></td>    
+            </tr>
+            <tr>
+              <td>Tax:</td>
+              <td>$<span id="taxAmount">00.00</span></td>    
+            </tr>
+            <tr>
+              <td>Total Due:</td>
+              <td>$<span id="totalDue">00.00</span></td>    
+            </tr>
+        </table>
+    </fieldset>
+</body>
+</html>
